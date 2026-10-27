@@ -1,0 +1,337 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f3f6fb;
+  color: #182641;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 24px;
+}
+
+.topbar,
+.brand,
+.history-heading,
+.transaction {
+  display: flex;
+  align-items: center;
+}
+
+.topbar,
+.history-heading {
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  gap: 12px;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #183d80;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.brand p {
+  margin: 3px 0 0;
+  color: #7b879c;
+  font-size: 13px;
+}
+
+.status {
+  padding: 9px 13px;
+  border-radius: 20px;
+  background: #e3f7eb;
+  color: #18794e;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.welcome {
+  margin: 42px 0 24px;
+}
+
+.eyebrow {
+  color: #3266bb;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.welcome h2 {
+  margin: 12px 0 8px;
+  font-size: 29px;
+}
+
+.welcome > p:last-child,
+.muted {
+  color: #7b879c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.balance-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 20px;
+  color: white;
+  background: linear-gradient(120deg, #173c83, #3165c5);
+  box-shadow: 0 12px 28px #173c8325;
+}
+
+.balance-card p {
+  margin-bottom: 12px;
+  color: #d6e4ff;
+}
+
+.balance-card h2 {
+  margin: 0 0 12px;
+  font-size: 36px;
+}
+
+.balance-card span {
+  color: #d6e4ff;
+  font-size: 12px;
+}
+
+.balance-symbol {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ffffff55;
+  border-radius: 50%;
+  font-size: 40px;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.panel {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid #e8edf5;
+  border-radius: 18px;
+  background: white;
+  box-shadow: 0 5px 18px #20365c08;
+}
+
+.panel h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.panel .muted {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin: 25px 0 9px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #dce3ee;
+  border-radius: 10px;
+  outline-color: #3266bb;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.button-row button,
+.refresh-button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+.deposit-button {
+  color: white;
+  background: #18794e;
+}
+
+.withdraw-button {
+  color: #b33c48;
+  background: #fff0f1;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.message {
+  margin: 16px 0 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.message.success {
+  color: #176b45;
+  background: #e7f7ee;
+}
+
+.message.error {
+  color: #a52d3a;
+  background: #fff0f1;
+}
+
+.refresh-button {
+  color: #2455a3;
+  background: #edf3ff;
+  font-size: 12px;
+}
+
+.transaction-list {
+  margin-top: 15px;
+}
+
+.transaction {
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.transaction:last-child {
+  border-bottom: 0;
+}
+
+.transaction-icon {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  font-size: 22px;
+}
+
+.transaction-icon.deposit {
+  color: #18794e;
+  background: #e7f7ee;
+}
+
+.transaction-icon.withdraw {
+  color: #b33c48;
+  background: #fff0f1;
+}
+
+.transaction-info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.transaction-info strong,
+.transaction-amount {
+  font-size: 13px;
+}
+
+.transaction-info span {
+  color: #7b879c;
+  font-size: 11px;
+  overflow-wrap: anywhere;
+}
+
+.transaction-amount {
+  white-space: nowrap;
+}
+
+.transaction-amount.deposit {
+  color: #18794e;
+}
+
+.transaction-amount.withdraw {
+  color: #b33c48;
+}
+
+footer {
+  padding: 30px 0 10px;
+  color: #8a95a8;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  .app {
+    padding: 16px;
+  }
+
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome {
+    margin-top: 32px;
+  }
+
+  .welcome h2 {
+    font-size: 24px;
+  }
+
+  .balance-card {
+    padding: 23px;
+  }
+
+  .balance-card h2 {
+    font-size: 30px;
+  }
+
+  .balance-symbol {
+    width: 54px;
+    height: 54px;
+    font-size: 30px;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
